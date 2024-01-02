@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void reverse ( char str1[] , char str2[] ) ;
+
+int main() {
+    char text1 [50] = " I Love You " ;
+    char out1 [50] ;
+    reverse ( text1, out1 );
+    printf ( "Input : %s\n", text1 ) ;
+    printf ( "Output : %s\n", out1 ) ;
+
+    char text2 [50] = " Hello World " ;
+    char out2 [50] ;
+    reverse( text2, out2 ) ;
+    printf ( "Input : %s\n", text2 ) ;
+    printf ( "Output : %s\n", out2 ) ;
+
+    return 0 ;
+}
+
+void reverse(char str1[], char str2[]) {
+
+    int max = 0 ;
+    while ( str1[max] != '\0' ) {
+        ++max ;
+    }
+
+    int i, j = 0 ;
+
+    for (i = max - 1; i >= 0; --i ) {
+        str2[j] = str1[i] ;
+        ++j ;
+    }
+
+    str2[j] = '\0' ;
+}
